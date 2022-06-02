@@ -4,17 +4,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name = "Student_ABC")
-public class Student {
+@Entity(name = "School_students")
+public class School {
 
     @Id
     @GeneratedValue
     int id;
     String name;
-    int rollNo;
-    String section;
+    int noOfStudents;
 
-    public Student() {
+    public School() {
     }
 
     public int getId() {
@@ -33,19 +32,11 @@ public class Student {
         this.name = name;
     }
 
-    public int getRollNo() {
-        return rollNo;
+    public int getNoOfStudents() {
+        return noOfStudents;
     }
 
-    public void setRollNo(int rollNo) {
-        this.rollNo = rollNo;
-    }
-
-    public String getSection() {
-        return section;
-    }
-
-    public void setSection(String section) {
-        this.section = section;
+    public void setNoOfStudents(int noOfStudents) {
+        this.noOfStudents = noOfStudents;
     }
 }

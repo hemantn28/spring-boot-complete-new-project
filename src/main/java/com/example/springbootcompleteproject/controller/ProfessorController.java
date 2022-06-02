@@ -1,6 +1,7 @@
 package com.example.springbootcompleteproject.controller;
 
 import com.example.springbootcompleteproject.model.Professor;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,8 +15,8 @@ public class ProfessorController {
     //1. Create or Add
 
     @RequestMapping("/add_prof")
-    public String add(){
-        Professor professor=new Professor("vinay Thakur", 53, "History");
+    public String add(@RequestBody Professor professor){
+        //Professor professor=new Professor("vinay Thakur", 53, "History");
         professorArrayList.add(professor);
         return "professor added successfully";
     }

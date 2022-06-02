@@ -1,15 +1,30 @@
 package com.example.springbootcompleteproject.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="Employee_Corporate")
 public class Employee {
 
-    String name;
+    @Id
+    @GeneratedValue
     int id;
+    String name;
+    int age;
+    @Column(name = "dept_Corp")
     String dept;
 
-    public Employee(String name, int id, String dept) {
-        this.name = name;
+    public Employee() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
-        this.dept = dept;
     }
 
     public String getName() {
@@ -20,12 +35,12 @@ public class Employee {
         this.name = name;
     }
 
-    public int getId() {
-        return id;
+    public int getAge() {
+        return age;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getDept() {

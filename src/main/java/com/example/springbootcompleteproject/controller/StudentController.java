@@ -10,27 +10,27 @@ import java.util.ArrayList;
 @RestController
 public class StudentController {
 
-    ArrayList<Student> studentArrayList=new ArrayList<>();
+    //ArrayList<Student> studentArrayList=new ArrayList<>();
 
     //1. Create or Add
 
     @RequestMapping("/add_student")
     public String add(){
-        Student student=new Student("Vinay",61,"PCB");
-        studentArrayList.add(student);
+       // Student student=new Student("Vinay",61,"PCB");
+        //studentArrayList.add(student);
         return "student added successfully";
     }
 
     //2. Read or Get
 
-    @RequestMapping("/get_studentlist")
-    public ArrayList<Student> getStudentArrayList(){
-        return studentArrayList;
+   // @RequestMapping("/get_studentlist")
+   // public ArrayList<Student> getStudentArrayList(){
+      //  return studentArrayList;
     }
 
     //3. Update
 
-    @RequestMapping("/update_student")
+   /* @RequestMapping("/update_student")
     public String update(){
         studentArrayList.get(0).setName("Raghu");
         return "student updated successfully";
@@ -46,4 +46,5 @@ public class StudentController {
 
     }
 
-}
+
+}*/

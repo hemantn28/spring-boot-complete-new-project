@@ -1,15 +1,29 @@
 package com.example.springbootcompleteproject.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Professor {
 
+    @Id
+    @GeneratedValue
+    int id;
     String name;
     int age;
     String subject;
 
-    public Professor(String name, int age, String subject) {
-        this.name = name;
-        this.age = age;
-        this.subject = subject;
+    public Professor() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

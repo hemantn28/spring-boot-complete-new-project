@@ -15,8 +15,8 @@ public class EmployeeController {
 
     @RequestMapping("/add_emp")
     public String add(){
-        Employee employee=new Employee("Raj",87,"IT");
-        employeeArrayList.add(employee);
+       // Employee employee=new Employee("Raj",87,"IT");
+       // employeeArrayList.add(employee);
         return "Employee added successfully";
     }
     //2.Read
